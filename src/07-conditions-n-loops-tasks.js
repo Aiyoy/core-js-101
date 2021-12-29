@@ -26,8 +26,18 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(/* num */) {
-  throw new Error('Not implemented');
+function getFizzBuzz(num) {
+  let res = num;
+  if (num % 3 === 0 && num % 5 === 0) {
+    res = 'FizzBuzz';
+  } else if (num % 3 === 0) {
+    res = 'Fizz';
+  } else if (num % 5 === 0) {
+    res = 'Buzz';
+  } else {
+    res = num;
+  }
+  return res;
 }
 
 /**
@@ -41,8 +51,17 @@ function getFizzBuzz(/* num */) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(/* n */) {
-  throw new Error('Not implemented');
+function getFactorial(num) {
+  let result = num;
+  let newNum = num;
+  if (newNum === 0 || newNum === 1) {
+    result = 1;
+  }
+  while (newNum > 1) {
+    newNum -= 1;
+    result *= newNum;
+  }
+  return result;
 }
 
 /**
@@ -57,8 +76,8 @@ function getFactorial(/* n */) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(/* n1, n2 */) {
-  throw new Error('Not implemented');
+function getSumBetweenNumbers(n1, n2) {
+  return (((n2 - n1) + 1) * (n1 + n2)) / 2;
 }
 
 /**
@@ -76,8 +95,14 @@ function getSumBetweenNumbers(/* n1, n2 */) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  let res = false;
+  if (a + b > c && a + c > b && c + b > a) {
+    res = true;
+  } else {
+    res = false;
+  }
+  return res;
 }
 
 /**
@@ -143,6 +168,19 @@ function doRectanglesOverlap(/* rect1, rect2 */) {
  *
  */
 function isInsideCircle(/* circle, point */) {
+  // const { x } = point;
+  // const { y } = point;
+  // const circleX = circle.center.x;
+  // const circleY = circle.center.x;
+  // const rad = circle.radius;
+  // let res = false;
+  // if ((x - circleX) * (x - circleX)
+  //   + (y - circleY) * (y - circleY) <= rad * rad) {
+  //   res = true;
+  // } else {
+  //   res = false;
+  // }
+  // return res;
   throw new Error('Not implemented');
 }
 
@@ -157,7 +195,15 @@ function isInsideCircle(/* circle, point */) {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-function findFirstSingleChar(/* str */) {
+function findFirstSingleChar(/* string */) {
+  // let res = null;
+  // for (let i = 0; i < string.length; i + 1) {
+  //   const c = string.charAt(i);
+  //   if (string.indexOf(c) === i && string.indexOf(c, i + 1) === -1) {
+  //     res = c;
+  //   }
+  // }
+  // return res;
   throw new Error('Not implemented');
 }
 
